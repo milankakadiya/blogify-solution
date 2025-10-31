@@ -300,7 +300,7 @@ try {
 
 touch app/Services/Importers/DevToImporter.php
 
-<?php
+`<?php
 
 namespace App\Services\Importers;
 
@@ -382,12 +382,12 @@ class DevToImporter implements ImporterInterface
     {
         return 'devto';
     }
-}
+}`
 
 Updated ImportController.php
 File: app/Http/Controllers/Admin/ImportController.php
 
-<?php
+`<?php
 
 namespace App\Http\Controllers\Admin;
 
@@ -437,14 +437,14 @@ class ImportController extends Controller
 
         return back()->with('error', $result['message']);
     }
-}
+}`
 
 Updated Import View
 File: resources/views/admin/imports/index.blade.php
 
 Add this new radio button option (after the existing two):
 
-<label class="flex items-start p-5 border-2 rounded-lg cursor-pointer hover:bg-gray-50 hover:border-blue-400 transition">
+`<label class="flex items-start p-5 border-2 rounded-lg cursor-pointer hover:bg-gray-50 hover:border-blue-400 transition">
     <input type="radio" name="source" value="devto" class="mt-1 mr-4" required>
     <div class="flex-1">
         <div class="font-semibold text-lg text-gray-800">Dev.to API</div>
@@ -453,11 +453,11 @@ Add this new radio button option (after the existing two):
             <strong>Endpoint:</strong> https://dev.to/api/articles
         </div>
     </div>
-</label>
+</label>`
 
 Complete updated form section in resources/views/admin/imports/index.blade.php:
 
-<div class="space-y-4">
+`<div class="space-y-4">
     <!-- JSONPlaceholder -->
     <label class="flex items-start p-5 border-2 rounded-lg cursor-pointer hover:bg-gray-50 hover:border-blue-400 transition">
         <input type="radio" name="source" value="jsonplaceholder" class="mt-1 mr-4" required>
@@ -493,7 +493,7 @@ Complete updated form section in resources/views/admin/imports/index.blade.php:
             </div>
         </div>
     </label>
-</div>
+</div>`
 
 Testing Commands
 
