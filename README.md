@@ -498,7 +498,8 @@ Complete updated form section in resources/views/admin/imports/index.blade.php:
 Testing Commands
 
 # 1. Create the new importer file
-touch app/Services/Importers/DevToImporter.php
+
+`touch app/Services/Importers/DevToImporter.php`
 
 # 2. Copy the DevToImporter code above into the file
 
@@ -520,15 +521,15 @@ php artisan serve
 # Click "Import Now"
 # Check if post is created successfully
 
-Verification Checklist
+# Verification Checklist
 After implementing, verify:
 
-✅ File exists: app/Services/Importers/DevToImporter.php
-✅ Namespace correct: namespace App\Services\Importers;
-✅ Implements interface: implements ImporterInterface
-✅ Controller updated: DevToImporter added to match statement
-✅ Validation updated: 'devto' added to validation rule
-✅ View updated: New radio button for Dev.to
-✅ Import works: Successfully imports article from Dev.to
-✅ Draft created: Post saved with status='draft'
-✅ Duplicate prevention: Reimporting same article shows duplicate message
+1. File exists: app/Services/Importers/DevToImporter.php
+2. Namespace correct: namespace App\Services\Importers;
+3. Implements interface: implements ImporterInterface
+4. Controller updated: DevToImporter added to match statement
+5. Validation updated: 'devto' added to validation rule
+6. View updated: New radio button for Dev.to
+7. Import works: Successfully imports article from Dev.to
+8. Draft created: Post saved with status='draft'
+9. Duplicate prevention: Reimporting same article shows duplicate message
